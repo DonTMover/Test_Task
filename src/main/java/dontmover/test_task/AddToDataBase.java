@@ -10,7 +10,7 @@ public class AddToDataBase {
     public static final String username = "postgres";
     public static final String password = "toor";
 
-    public static String sqlcards = "INSERT INTO cards (CardID,discound,first_name,last_name) VALUES (?,?,?,?)";
+    public static String sqlcards = "INSERT INTO cards (id,discound,first_name,last_name) VALUES (?,?,?,?)";
 
     public static String sqlitems = "INSERT INTO items (id,first_name,last_name) VALUES (?,?,?)";
     public static boolean AddToCards(Integer CardID,Integer discound,String first_name,String last_name) throws SQLException {
@@ -22,11 +22,15 @@ public class AddToDataBase {
         }
         try {
             Connection connection = DriverManager.getConnection(jdbcURL, username, password);
-            PreparedStatement statement = connection.prepareStatement(jdbcURL);
+            PreparedStatement statement = connection.prepareStatement(sqlcards);
             statement.setInt(1,CardID);
             statement.setInt(2,discound);
             statement.setString(3,first_name);
             statement.setString(4,last_name);
+            int rows = statement.executeUpdate();
+            if(rows>0){
+                System.out.println("A new Card user has been inserted");
+            }
             connection.close();
             return true;
         }catch (Exception e){
@@ -46,10 +50,14 @@ public class AddToDataBase {
         }
         try{
             Connection connection = DriverManager.getConnection(jdbcURL,username,password);
-            PreparedStatement statement = connection.prepareStatement(jdbcURL);
+            PreparedStatement statement = connection.prepareStatement(sqlitems);
             statement.setInt(1,id);
             statement.setString(2,first_name);
             statement.setString(3,last_name);
+            int rows = statement.executeUpdate();
+            if(rows>0){
+                System.out.println("A new item has been inserted");
+            }
             connection.close();
             return true;
         }catch (Exception e){
