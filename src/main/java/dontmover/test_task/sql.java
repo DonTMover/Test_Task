@@ -5,14 +5,16 @@ public class sql {
     public static final String jdbcURL = "jdbc:postgresql://localhost:5432/testtask";
     public static final String username = "postgres";
     public static final String password = "toor";
+
     public static Connection GetConnection() throws SQLException{
 
         return DriverManager.getConnection(jdbcURL,username,password);
     }
-    public static ResultSet query(String tableName) throws SQLException {
+    public static ResultSet AllQuery(String tableName) throws SQLException {
         Connection connection = sql.GetConnection();
-        String sqlquery = "SELECT * FROM " + tableName;
-        Statement statement = connection.createStatement();
+        String sqlquery = "SELECT * FROM ?";
+        PreparedStatement statement = connection.prepareStatement(sqlquery);
+        statement.setString(1,tableName);
         ResultSet result = statement.executeQuery(sqlquery);
         connection.close();
         return result;
@@ -20,6 +22,8 @@ public class sql {
     public static String sqlcards = "INSERT INTO cards (id,discound,first_name,last_name) VALUES (?,?,?,?)";
 
     public static String sqlitems = "INSERT INTO items (id,name) VALUES (?,?)";
+
+
 
     //the boolean type was used to understand the success of the operation
     public static boolean AddToCards(Integer CardID,Integer discound,String first_name,String last_name) {
@@ -51,7 +55,7 @@ public class sql {
             }
         }
     }
-    public static boolean AddtoItems(Integer id,String name){
+    public static boolean AddToItems(Integer id,String name){
         if (id<0){
             return false;
         }
@@ -69,6 +73,18 @@ public class sql {
         }catch (Exception e){
             e.printStackTrace();
             return false;
+        }
+
+
+    }
+    public static String sqlwherequery = "SELECT * FROM ? WHERE ? = ?";
+    public static ResultSet whereQuery(String WhatWeKnow,String table,String whatWeUseToSearchFor) throws SQLException{
+        try(Connection connection = sql.GetConnection()) {
+            PreparedStatement statement = connection.prepareStatement(sqlwherequery);
+            statement.setString(1, table);
+            statement.setString(2, WhatWeKnow);
+            statement.setString(3, whatWeUseToSearchFor);
+            return statement.executeQuery(sqlwherequery);
         }
 
     }

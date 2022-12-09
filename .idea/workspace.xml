@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0848d2b-9a8f-4e3f-9255-2a95d3325786" name="Changes" comment="Fixed bugs that could lead to memory leaks">
+    <list default="true" id="d0848d2b-9a8f-4e3f-9255-2a95d3325786" name="Changes" comment="Transferred all sql functionality into one class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/AddToDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/AddToDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/sql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/sql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Properties.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670591555039</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Transferred all sql functionality into one class">
+      <created>1670602147206</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670602147206</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -124,7 +133,8 @@
     <MESSAGE value="Добавил и Починил Добавление в бд" />
     <MESSAGE value="added a sql query and made a separate class for sql connect" />
     <MESSAGE value="Fixed bugs that could lead to memory leaks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs that could lead to memory leaks" />
+    <MESSAGE value="Transferred all sql functionality into one class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Transferred all sql functionality into one class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
