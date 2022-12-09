@@ -11,9 +11,8 @@ public class sqlquery {
         String sqlquery = "SELECT * FROM " + tableName;
         Statement statement = connection.createStatement();
         ResultSet result = statement.executeQuery(sqlquery);
+        connection.close();
         return result;
     }
-//    public static ResultSet query(String id,String first_name,String last_name) throws SQLException{
-//        return null;
-//    }
+
 }
