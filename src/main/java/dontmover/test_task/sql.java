@@ -1,7 +1,6 @@
 package dontmover.test_task;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
+
 public class sql {
     public static final String jdbcURL = "jdbc:postgresql://localhost:5432/testtask";
     public static final String username = "postgres";
@@ -9,5 +8,68 @@ public class sql {
     public static Connection GetConnection() throws SQLException{
 
         return DriverManager.getConnection(jdbcURL,username,password);
+    }
+    public static ResultSet query(String tableName) throws SQLException {
+        Connection connection = sql.GetConnection();
+        String sqlquery = "SELECT * FROM " + tableName;
+        Statement statement = connection.createStatement();
+        ResultSet result = statement.executeQuery(sqlquery);
+        connection.close();
+        return result;
+    }
+    public static String sqlcards = "INSERT INTO cards (id,discound,first_name,last_name) VALUES (?,?,?,?)";
+
+    public static String sqlitems = "INSERT INTO items (id,name) VALUES (?,?)";
+
+    //the boolean type was used to understand the success of the operation
+    public static boolean AddToCards(Integer CardID,Integer discound,String first_name,String last_name) {
+        if(CardID < 0 ){
+            return false;
+        }
+        if (discound > 100){
+            return false;
+        }
+        try {
+            Connection connection = sql.GetConnection();
+            PreparedStatement statement = connection.prepareStatement(sqlcards);
+            statement.setInt(1,CardID);
+            statement.setInt(2,discound);
+            statement.setString(3,first_name);
+            statement.setString(4,last_name);
+            int rows = statement.executeUpdate();
+            if(rows>0){
+                System.out.println("A new Card user has been inserted");
+            }
+            connection.close();
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            try {
+                throw e;
+            } catch (SQLException ex) {
+                throw new RuntimeException(ex);
+            }
+        }
+    }
+    public static boolean AddtoItems(Integer id,String name){
+        if (id<0){
+            return false;
+        }
+        try{
+            Connection connection = sql.GetConnection();
+            PreparedStatement statement = connection.prepareStatement(sqlitems);
+            statement.setInt(1,id);
+            statement.setString(2,name);
+            int rows = statement.executeUpdate();
+            if(rows>0){
+                System.out.println("A new item has been inserted");
+            }
+            connection.close();
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+
     }
 }
