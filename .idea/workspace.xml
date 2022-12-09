@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0848d2b-9a8f-4e3f-9255-2a95d3325786" name="Changes" comment="update commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/PrintTheCheck.java" afterDir="false" />
+    <list default="true" id="d0848d2b-9a8f-4e3f-9255-2a95d3325786" name="Changes" comment="Добавил и Починил Добавление в бд">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/sql.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/sqlquery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/AddToDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/AddToDataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/Main.java" afterDir="false" />
@@ -43,6 +44,7 @@
         <option value="Enum" />
         <option value="XML Properties File" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -96,12 +98,20 @@
       <option name="project" value="LOCAL" />
       <updated>1670584933313</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Добавил и Починил Добавление в бд">
+      <created>1670586427030</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670586427030</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="update commit" />
+    <MESSAGE value="Добавил и Починил Добавление в бд" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил и Починил Добавление в бд" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

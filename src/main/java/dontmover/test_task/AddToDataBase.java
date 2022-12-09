@@ -1,19 +1,15 @@
 package dontmover.test_task;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class AddToDataBase {
-    public static final String jdbcURL = "jdbc:postgresql://localhost:5432/testtask";
-    public static final String username = "postgres";
-    public static final String password = "toor";
 
     public static String sqlcards = "INSERT INTO cards (id,discound,first_name,last_name) VALUES (?,?,?,?)";
 
     public static String sqlitems = "INSERT INTO items (id,first_name,last_name) VALUES (?,?,?)";
-    public static boolean AddToCards(Integer CardID,Integer discound,String first_name,String last_name) throws SQLException {
+    public static boolean AddToCards(Integer CardID,Integer discound,String first_name,String last_name) {
         if(CardID < 0 ){
             return false;
         }
@@ -21,7 +17,7 @@ public class AddToDataBase {
             return false;
         }
         try {
-            Connection connection = DriverManager.getConnection(jdbcURL, username, password);
+            Connection connection = sql.GetConnection();
             PreparedStatement statement = connection.prepareStatement(sqlcards);
             statement.setInt(1,CardID);
             statement.setInt(2,discound);
@@ -39,8 +35,6 @@ public class AddToDataBase {
                 throw e;
             } catch (SQLException ex) {
                 throw new RuntimeException(ex);
-            }finally {
-                return false;
             }
         }
     }
@@ -49,7 +43,7 @@ public class AddToDataBase {
             return false;
         }
         try{
-            Connection connection = DriverManager.getConnection(jdbcURL,username,password);
+            Connection connection = sql.GetConnection();
             PreparedStatement statement = connection.prepareStatement(sqlitems);
             statement.setInt(1,id);
             statement.setString(2,first_name);
