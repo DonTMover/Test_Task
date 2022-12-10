@@ -1,20 +1,24 @@
 package dontmover.test_task;
 import java.sql.*;
+import java.util.logging.Logger;
 
 public class sql {
+
     public static final String jdbcURL = "jdbc:postgresql://localhost:5432/testtask";
     public static final String username = "postgres";
     public static final String password = "toor";
 
     public static Connection GetConnection() throws SQLException{
 
-        return DriverManager.getConnection(jdbcURL,username,password);
+            return DriverManager.getConnection(jdbcURL,username,password);
+
     }
     public static ResultSet AllQuery(String tableName) throws SQLException {
         Connection connection = sql.GetConnection();
-        String sqlquery = "SELECT * FROM ?";
-        PreparedStatement statement = connection.prepareStatement(sqlquery);
-        statement.setString(1,tableName);
+        String sqlquery = "SELECT * FROM " + tableName;
+        Statement statement = connection.createStatement();
+        //PreparedStatement statement = connection.prepareStatement(sqlquery);
+        //statement.setString(1,tableName);
         ResultSet result = statement.executeQuery(sqlquery);
         connection.close();
         return result;

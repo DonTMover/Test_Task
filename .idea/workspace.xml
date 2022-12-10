@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0848d2b-9a8f-4e3f-9255-2a95d3325786" name="Changes" comment="More changes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/item.java" afterDir="false" />
+    <list default="true" id="d0848d2b-9a8f-4e3f-9255-2a95d3325786" name="Changes" comment="added new class &quot;item&quot; and some logic in main class + log4j">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/postgresql-42.5.1.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/sql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/sql.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +25,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -63,16 +68,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/DonTMover/IdeaProjects/main/src/main/resources/postgresql-42.5.1.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="Application.Unnamed">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dontmover.test_task.Main" />
       <module name="main.main" />
@@ -81,6 +88,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dontmover.test_task.Main" />
+      <module name="main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Unnamed" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -133,17 +151,38 @@
       <option name="project" value="LOCAL" />
       <updated>1670621249956</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added new class &quot;item&quot; and some logic in main class + log4j">
+      <created>1670665982105</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670665982105</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update commit" />
     <MESSAGE value="Добавил и Починил Добавление в бд" />
     <MESSAGE value="added a sql query and made a separate class for sql connect" />
     <MESSAGE value="Fixed bugs that could lead to memory leaks" />
     <MESSAGE value="Transferred all sql functionality into one class" />
     <MESSAGE value="More changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="More changes" />
+    <MESSAGE value="added new class &quot;item&quot; and some logic in main class" />
+    <MESSAGE value="added new class &quot;item&quot; and some logic in main class + log4j" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new class &quot;item&quot; and some logic in main class + log4j" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -151,6 +190,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="org.postgresql.util.PSQLException" package="org.postgresql.util" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.gradle.api.tasks.TaskExecutionException" package="org.gradle.api.tasks" />
+          <option name="timeStamp" value="3" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
