@@ -2,6 +2,8 @@ package dontmover.test_task;
 
 
 
+import com.sun.source.tree.WhileLoopTree;
+
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -23,9 +25,21 @@ public class Main {
         }
         for (item item : items) {
             if (item.getId().equalsIgnoreCase("card")){
-                System.out.println("true");
-                hascard = true;
+                String amount = item.getAmount();
+                ResultSet resultSet = sql.AllQuery("cards");
+                while (resultSet.next()){
+                    String id = String.valueOf(resultSet.getInt("id"));
+                    if (id.equalsIgnoreCase(amount)){
+                        hascard=true;
+                        System.out.println("true");
+                    }else {
+                        System.out.println("FAKE CARD!!!");
+                        hascard=false;
+                    }
+                }
+
             }else {
+                System.out.println("false");
                 hascard=false;
             }
         }
@@ -36,10 +50,23 @@ public class Main {
         }
         ResultSet resultSet = sql.AllQuery("items");
         while(resultSet.next()){
-            int id = resultSet.getInt("id");
-            String name = resultSet.getString("name");
-            System.out.printf("%d %s\n",id,name);
+            String id = String.valueOf(resultSet.getInt("id"));
+            for (item item : items) {
+                if (item.getId().equals(id)) {
+                    if (id.equals("card")){
+
+                    }
+
+                    System.out.println("+");
+                } else {
+                    System.out.println("-");
+                }
+
+            }
+            System.out.printf("%s\n",id);
         }
+
+
 
 
 
