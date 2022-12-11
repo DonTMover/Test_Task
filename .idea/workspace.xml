@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0848d2b-9a8f-4e3f-9255-2a95d3325786" name="Changes" comment="added new class &quot;item&quot; and some logic in main class + log4j">
+    <list default="true" id="d0848d2b-9a8f-4e3f-9255-2a95d3325786" name="Changes" comment="fixed anythink">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/Main.java" afterDir="false" />
     </list>
@@ -159,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670665982105</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fixed anythink">
+      <created>1670764214558</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670764214558</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,7 +190,8 @@
     <MESSAGE value="More changes" />
     <MESSAGE value="added new class &quot;item&quot; and some logic in main class" />
     <MESSAGE value="added new class &quot;item&quot; and some logic in main class + log4j" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new class &quot;item&quot; and some logic in main class + log4j" />
+    <MESSAGE value="fixed anythink" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed anythink" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -196,6 +204,11 @@
           <properties class="org.gradle.api.tasks.TaskExecutionException" package="org.gradle.api.tasks" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dontmover/test_task/Main.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
