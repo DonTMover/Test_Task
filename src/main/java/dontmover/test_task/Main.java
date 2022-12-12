@@ -66,33 +66,36 @@ public class Main {
 //            System.out.printf("%s\n",id);
 //        }
 
-        ResultSet resultSet = sql.AllQuery("cards");
-
-        String id1 = "";
-        while (resultSet.next()){
-            for (item item : items) {
-                if (item.getId().equals("card")){
-                    id1 = item.getAmount();
-                }
-
-            }
-            String id = String.valueOf(resultSet.getInt("id"));
-            if (id.equals(id1)) {
-                hascard = true;
-                System.out.println("true card!");
-            }
-        }
-        resultSet.close();
-        ResultSet resultSet1 = sql.AllQuery("items");
-        while (resultSet1.next()){
-            for (item item : items) {
-                if(item.getId().equalsIgnoreCase(resultSet1.getString("id"))){
-                    System.out.println("SADASASD");
-                }
-                System.out.println(resultSet1.getString("id"));
-
-            }
-        }
+//        ResultSet resultSet = sql.AllQuery("cards");
+//
+//        String id1 = "";
+//        while (resultSet.next()){
+//            for (item item : items) {
+//                if (item.getId().equals("card")){
+//                    id1 = item.getAmount();
+//                }
+//
+//            }
+//            String id = String.valueOf(resultSet.getInt("id"));
+//            if (id.equals(id1)) {
+//                hascard = true;
+//                System.out.println("true card!");
+//            }
+//        }
+//        resultSet.close();
+//        ResultSet resultSet1 = sql.AllQuery("items");
+//        while (resultSet1.next()){
+//            for (item item : items) {
+//                if (item.getId().equalsIgnoreCase(String.valueOf(resultSet1.getInt("id")))){
+//                    System.out.println("+");
+//                }
+//
+//
+//            }
+//        }
+//        sql.AddToItems(2,"Пельмени",7);
+//        sql.AddToItems(3,"Шаурма",5);
+        PrintTheCheck.printTheCheck(items);
 
 
 

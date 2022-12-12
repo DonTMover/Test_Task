@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0848d2b-9a8f-4e3f-9255-2a95d3325786" name="Changes" comment="fixed anythink">
+    <list default="true" id="d0848d2b-9a8f-4e3f-9255-2a95d3325786" name="Changes" comment="fixed что-то">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/PrintTheCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/PrintTheCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/sql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/sql.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +53,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b6ca9c37-508c-4969-bf6c-00df31707b6f" />
+        <option name="url" value="https://github.com/DonTMover/Test_Task.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -75,11 +90,11 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dontmover.test_task.Main" />
       <module name="main.main" />
-      <option name="PROGRAM_PARAMETERS" value="3-2 5-1 4-2 card-1234" />
+      <option name="PROGRAM_PARAMETERS" value="2-2 3-1 121212-2 card-1" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -100,6 +115,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main1" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -166,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670764214558</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed что-то">
+      <created>1670780873558</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670780873558</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,7 +217,8 @@
     <MESSAGE value="added new class &quot;item&quot; and some logic in main class" />
     <MESSAGE value="added new class &quot;item&quot; and some logic in main class + log4j" />
     <MESSAGE value="fixed anythink" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed anythink" />
+    <MESSAGE value="fixed что-то" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed что-то" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -205,9 +232,14 @@
           <option name="timeStamp" value="3" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/dontmover/test_task/Main.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="9" />
+          <url>file://$PROJECT_DIR$/src/main/java/dontmover/test_task/PrintTheCheck.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dontmover/test_task/PrintTheCheck.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
