@@ -18,6 +18,7 @@ public class Main {
             System.out.println();
             items.add(new item(str[0],str[1]));
         }
+        PrintTheCheck.printTheCheck(items);
 
 //        for (item item : items) {
 //            System.out.println("amount: "+item.getAmount());
@@ -95,7 +96,7 @@ public class Main {
 //        }
 //        sql.AddToItems(2,"Пельмени",7);
 //        sql.AddToItems(3,"Шаурма",5);
-        PrintTheCheck.printTheCheck(items);
+
 
 
 

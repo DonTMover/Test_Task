@@ -3,6 +3,8 @@ package dontmover.test_task;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PrintTheCheck {
     public static boolean hasCard = false;
@@ -12,7 +14,7 @@ public class PrintTheCheck {
     public static void printTheCheck(ArrayList<item> arrayList){
 
         try {
-            ArrayList<Integer> price1 = new ArrayList<>();
+
             int price = 0;
             ResultSet resultSet1 = sql.AllQuery("cards");
             ArrayList<String> buy = new ArrayList<>();
@@ -37,42 +39,80 @@ public class PrintTheCheck {
                             while(resultSet1.next()){
                                 if (str.equalsIgnoreCase(resultSet1.getString("id"))){
                                     hasCard = true;
-                                    System.out.println("Карта имеется!");
+                                    System.out.println("Card true!");
                                 }
                             }
                         }
 
 
                     }
+//                    ArrayList<Integer> priceFromDB = new ArrayList<>();//Price from sql
+                    Map<Integer,Integer> pricesWitchID = new HashMap<>();
+                    ArrayList<Integer> priceOf = new ArrayList<>();
+                    ArrayList<Integer> priceIfHave = new ArrayList<>();
                     int discound = 0;
                     if (hasCard){
                         while(resultSet.next()){
-                            price1.add(resultSet.getInt("price"));
+                            pricesWitchID.put(resultSet.getInt("id"),resultSet.getInt("price"));
                         }
-                        for (Integer integer : price1) {
-                            price = price + integer;
+                        for (item item : arrayList) {
+
+                            price = price + pricesWitchID.get(item.getId());
                         }
-                        System.out.println(price);
+                        System.out.println(price + " Price witchout discound ");
                         while(resultSet1.next()){
                             if (str1.equalsIgnoreCase(resultSet1.getString("id"))){
                                 discound = resultSet1.getInt("discound");
                             }
                             price = price - (price *(discound/100));
-                            System.out.println(price);
-                        }
 
+                        }
+                        System.out.println(price);
                     }else{
                         while(resultSet.next()){
-                            price1.add(resultSet.getInt("price"));
+                            pricesWitchID.put(resultSet.getInt("id"),resultSet.getInt("price"));
                         }
-                        for (Integer integer : price1) {
-                            price = price + integer;
+                        for (item item : arrayList) {
+                            price = price + pricesWitchID.get(item.getId());
                         }
-
+                        System.out.println(price + " Price");
                     }
+//                    if (hasCard){
+//                        while(resultSet.next()){
+//                            price1.add(resultSet.getInt("price"));
+//                        }
+//                        for (item item : arrayList) {
+//                            priceOf.add(Integer.parseInt(item.getId()));
+//                        }
+//                        for (Integer integer : price1) {
+//                            for (Integer pric : price1) {
+//                                for (Integer integer2 : priceOf) {
+//                                    if (){
+//
+//                                    }
+//                                }
+//                            }
+//                        }
+//                        System.out.println(price);
+//                        while(resultSet1.next()){
+//                            if (str1.equalsIgnoreCase(resultSet1.getString("id"))){
+//                                discound = resultSet1.getInt("discound");
+//                            }
+//                            price = price - (price *(discound/100));
+//                            System.out.println(price);
+//                        }
+//
+//                    }else{
+//                        while(resultSet.next()){
+//                            price1.add(resultSet.getInt("price"));
+//                        }
+//                        for (Integer integer : price1) {
+//
+//                        }
+//
+//                    }
                 }
-                resultSet.close();
-                resultSet1.close();
+
 
 
         } catch (SQLException e) {
