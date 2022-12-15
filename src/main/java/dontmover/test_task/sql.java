@@ -4,9 +4,9 @@ import java.util.logging.Logger;
 
 public class sql {
 
-    public static final String jdbcURL = "jdbc:postgresql://localhost:5432/testtask";
-    public static final String username = "postgres";
-    public static final String password = "toor";
+    private static final String jdbcURL = "jdbc:postgresql://localhost:5432/testtask";
+    private static final String username = "postgres";
+    private static final String password = "toor";
 
     public static Connection GetConnection() throws SQLException{
 

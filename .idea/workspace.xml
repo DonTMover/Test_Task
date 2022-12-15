@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0848d2b-9a8f-4e3f-9255-2a95d3325786" name="Changes" comment="Реализовал логику подсчета и вывода цены">
+    <list default="true" id="d0848d2b-9a8f-4e3f-9255-2a95d3325786" name="Changes" comment="Логика вывода чека переделана">
+      <change afterPath="$PROJECT_DIR$/src/test/java/dontmover/test_task/MainTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dontmover/test_task/PrintTheCheckTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dontmover/test_task/itemTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dontmover/test_task/sqlTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/PrintTheCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/PrintTheCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/sql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/sql.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +50,7 @@
         <option value="XML Properties File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -78,18 +83,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/DonTMover/IdeaProjects/main/src/main/resources/postgresql-42.5.1.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Users/DonTMover/IdeaProjects/main/src/main/resources/postgresql-42.5.1.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
-  <component name="RunManager" selected="Application.Main1">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="dontmover.test_task" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dontmover.test_task.Main" />
       <module name="main.main" />
@@ -114,10 +129,61 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="sqlTest.allQuery" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;dontmover.test_task.sqlTest.allQuery&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ItemTest" type="JUnit" factoryName="JUnit">
+      <module name="main.test" />
+      <option name="PACKAGE_NAME" value="dontmover.test_task" />
+      <option name="MAIN_CLASS_NAME" value="dontmover.test_task.itemTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sqlTest" type="JUnit" factoryName="JUnit">
+      <module name="main.test" />
+      <option name="PACKAGE_NAME" value="dontmover.test_task" />
+      <option name="MAIN_CLASS_NAME" value="dontmover.test_task.sqlTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main1" />
+      <item itemvalue="Gradle.sqlTest.allQuery" />
+      <item itemvalue="JUnit.sqlTest" />
+      <item itemvalue="JUnit.ItemTest" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.sqlTest.allQuery" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -198,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670862764282</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Логика вывода чека переделана">
+      <created>1671025137633</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1671025137633</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,7 +298,8 @@
     <MESSAGE value="fixed anythink" />
     <MESSAGE value="fixed что-то" />
     <MESSAGE value="Реализовал логику подсчета и вывода цены" />
-    <option name="LAST_COMMIT_MESSAGE" value="Реализовал логику подсчета и вывода цены" />
+    <MESSAGE value="Логика вывода чека переделана" />
+    <option name="LAST_COMMIT_MESSAGE" value="Логика вывода чека переделана" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
