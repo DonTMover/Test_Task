@@ -2,11 +2,6 @@ package dontmover.test_task;
 
 import org.junit.jupiter.api.Test;
 
-import java.sql.SQLException;
-import java.util.Arrays;
-
-import static org.junit.jupiter.api.Assertions.*;
-
 class MainTest {
     private static String[] array = new String[3];
     static {
@@ -19,13 +14,6 @@ class MainTest {
 
     @Test
     void main() {
-//        try {
-//            assertEquals(,Main.main(array));
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        } catch (ClassNotFoundException e) {
-//            throw new RuntimeException(e);
-//        }
-        //How?
+        //Я не знаю как, через System.setOut и через PrintStream?
     }
 }

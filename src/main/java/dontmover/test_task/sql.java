@@ -1,6 +1,6 @@
 package dontmover.test_task;
+
 import java.sql.*;
-import java.util.logging.Logger;
 
 public class sql {
 
@@ -17,8 +17,6 @@ public class sql {
         Connection connection = sql.GetConnection();
         String sqlquery = "SELECT * FROM " + tableName;
         Statement statement = connection.createStatement();
-        //PreparedStatement statement = connection.prepareStatement(sqlquery);
-        //statement.setString(1,tableName);
         ResultSet result = statement.executeQuery(sqlquery);
         connection.close();
         return result;
@@ -88,14 +86,14 @@ public class sql {
 
 
     }
-    public static String sqlwherequery = "SELECT * FROM ? WHERE ? = ?";
+
     public static ResultSet whereQuery(String WhatWeKnow,String table,String whatWeUseToSearchFor) throws SQLException{
+        String sqlwherequery = "SELECT * FROM " + table +" WHERE "+WhatWeKnow+" = "+whatWeUseToSearchFor;
         try(Connection connection = sql.GetConnection()) {
-            PreparedStatement statement = connection.prepareStatement(sqlwherequery);
-            statement.setString(1, table);
-            statement.setString(2, WhatWeKnow);
-            statement.setString(3, whatWeUseToSearchFor);
-            return statement.executeQuery(sqlwherequery);
+            Statement statement = connection.createStatement();
+            ResultSet result = statement.executeQuery(sqlwherequery);
+            connection.close();
+            return result;
         }
 
     }
