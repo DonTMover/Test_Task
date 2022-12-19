@@ -25,7 +25,7 @@ public class PrintTheCheck {
                     for (item item : arrayList) {
                         if (!item.id.equalsIgnoreCase("card")){
                             if(Integer.parseInt(item.id)==resultSet.getInt("id")) {
-                                var str = resultSet.getString("name");
+
                             }
                         }else{
                             String str = item.amount;//WE have card number and need check on dataBase;
@@ -59,21 +59,41 @@ public class PrintTheCheck {
 
                                     fileWriter.write("Amount:"+item.amount+" Name:"+name+" Price:"+priceTemp+"\n");
                                 }
+                                connection.close();
                             }
+
                         }
                     Map<Integer,Integer> pricesWitchID = new HashMap<>();
+//                        ArrayList<item> items = new ArrayList<>();
                     ResultSet resultSet4 = sql.whereQuery("id","cards",String.valueOf(str1));
 
-                    float discound = 0;
+                    float discound;
                     if (hasCard){
                         while(resultSet.next()){
-                            pricesWitchID.put(resultSet.getInt("id"),resultSet.getInt("price"));
+                            int id = resultSet.getInt("id");
+                            int pricee = resultSet.getInt("price");
+//                            String name = resultSet.getString("name");
+                            pricesWitchID.put(id,pricee);
+//                            items.add(new itemBuilderImpl().setId(String.valueOf(id)).setPrice(pricee).setName(name).build());
                         }
                         for (item item : arrayList) {
                             if (item.id.equalsIgnoreCase("card")){
                                 //Так и надо
                             }else{
-                                price += pricesWitchID.get(Integer.parseInt(item.id)) * Integer.parseInt(item.amount);
+                                ResultSet resultSett = sql.whereQuery("id","items",item.id);
+                                boolean promotional = false;
+                                while(resultSett.next()){
+                                    promotional = resultSett.getBoolean("promotional");
+                                }
+                                if ((Integer.parseInt(item.amount)>5) &&(promotional)){
+                                    double temp = (pricesWitchID.get(Integer.parseInt(item.id)) * Integer.parseInt(item.amount))*0.1;
+                                    price = (float) (price +  (pricesWitchID.get(Integer.parseInt(item.id)) * Integer.parseInt(item.amount))-temp);
+                                }else{
+                                    price += pricesWitchID.get(Integer.parseInt(item.id)) * Integer.parseInt(item.amount);
+                                }
+                                resultSett.close();
+
+
                             }
 
                         }

@@ -4,28 +4,15 @@ public class item {
     boolean promotional;
     String amount;
     String id;
-//    public String getId(){
-//        return id;
-//    }
-//    public void setId(String id){
-//        this.id = id;
-//    }
-//    public String getAmount(){
-//        return amount;
-//    }
-//    public void setAmount(String amount){
-//        this.amount = amount;
-//    }
-//    public item(String id,String amount){
-//        setAmount(amount);
-//        setId(id);
-//    }
-
+    int price;
+    String name;
 }
 interface itemBuilder{
     itemBuilder setAmount(String amount);
     itemBuilder setId(String id);
     itemBuilder setPromotional(boolean promotional);
+    itemBuilder setPrice(int price);
+    itemBuilder setName(String name);
     item build();
 
 }
@@ -46,6 +33,18 @@ class itemBuilderImpl implements itemBuilder{
     @Override
     public itemBuilder setPromotional(boolean promotional) {
         item.promotional = promotional;
+        return this;
+    }
+
+    @Override
+    public itemBuilder setPrice(int price) {
+        item.price = price;
+        return this;
+    }
+
+    @Override
+    public itemBuilder setName(String name) {
+        item.name = name;
         return this;
     }
 
