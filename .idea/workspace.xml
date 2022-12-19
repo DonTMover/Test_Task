@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0848d2b-9a8f-4e3f-9255-2a95d3325786" name="Changes" comment="Реализовал функционал, обновил README.md, так-же был добавлен способ использовать файл как аргумент при использовании -f">
-      <change afterPath="$PROJECT_DIR$/result.txt" afterDir="false" />
+    <list default="true" id="d0848d2b-9a8f-4e3f-9255-2a95d3325786" name="Changes" comment="Починил работу скидок по карте">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/ConnectionException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/IdNotFoundException.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/PrintTheCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/PrintTheCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dontmover/test_task/sql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dontmover/test_task/sql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dontmover/test_task/itemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dontmover/test_task/itemTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dontmover/test_task/sqlTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dontmover/test_task/sqlTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671379980393</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Починил работу скидок по карте">
+      <created>1671381195893</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1671381195893</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -336,7 +347,8 @@
     <MESSAGE value="Логика вывода чека переделана" />
     <MESSAGE value="Some Unit Test's , but some tests I can't implement" />
     <MESSAGE value="Реализовал функционал, обновил README.md, так-же был добавлен способ использовать файл как аргумент при использовании -f" />
-    <option name="LAST_COMMIT_MESSAGE" value="Реализовал функционал, обновил README.md, так-же был добавлен способ использовать файл как аргумент при использовании -f" />
+    <MESSAGE value="Починил работу скидок по карте" />
+    <option name="LAST_COMMIT_MESSAGE" value="Починил работу скидок по карте" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

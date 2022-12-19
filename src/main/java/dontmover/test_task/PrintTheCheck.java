@@ -23,12 +23,12 @@ public class PrintTheCheck {
             ResultSet resultSet = sql.AllQuery("items");
                 while (resultSet.next()) {
                     for (item item : arrayList) {
-                        if (!item.getId().equalsIgnoreCase("card")){
-                            if(Integer.parseInt(item.getId())==resultSet.getInt("id")) {
+                        if (!item.id.equalsIgnoreCase("card")){
+                            if(Integer.parseInt(item.id)==resultSet.getInt("id")) {
                                 var str = resultSet.getString("name");
                             }
                         }else{
-                            String str = item.getAmount();//WE have card number and need check on dataBase;
+                            String str = item.amount;//WE have card number and need check on dataBase;
                             str1 = Integer.parseInt(str);
 
                             while(resultSet1.next()){
@@ -46,8 +46,8 @@ public class PrintTheCheck {
 
                         for (item item : arrayList) {
                             String sqlwherequery = "SELECT * FROM items WHERE id = ";
-                            if (!item.getId().equalsIgnoreCase("card")){
-                                sqlwherequery = sqlwherequery+item.getId();
+                            if (!item.id.equalsIgnoreCase("card")){
+                                sqlwherequery = sqlwherequery+item.id;
                                 Connection connection = sql.GetConnection();
                                 Statement statement = connection.createStatement();
                                 ResultSet resultSet2 = statement.executeQuery(sqlwherequery);
@@ -55,9 +55,9 @@ public class PrintTheCheck {
                                 if (resultSet2.next()){
                                     String name = resultSet2.getString("name");
                                     int priceTemp = resultSet2.getInt("price");
-                                    System.out.printf("Amount:%d Name:%s Price:%d\n",Integer.parseInt(item.getAmount()),name,priceTemp);
+                                    System.out.printf("Amount:%d Name:%s Price:%d\n",Integer.parseInt(item.amount),name,priceTemp);
 
-                                    fileWriter.write("Amount:"+item.getAmount()+" Name:"+name+" Price:"+priceTemp+"\n");
+                                    fileWriter.write("Amount:"+item.amount+" Name:"+name+" Price:"+priceTemp+"\n");
                                 }
                             }
                         }
@@ -70,10 +70,10 @@ public class PrintTheCheck {
                             pricesWitchID.put(resultSet.getInt("id"),resultSet.getInt("price"));
                         }
                         for (item item : arrayList) {
-                            if (item.getId().equalsIgnoreCase("card")){
+                            if (item.id.equalsIgnoreCase("card")){
                                 //Так и надо
                             }else{
-                                price += pricesWitchID.get(Integer.parseInt(item.getId())) * Integer.parseInt(item.getAmount());
+                                price += pricesWitchID.get(Integer.parseInt(item.id)) * Integer.parseInt(item.amount);
                             }
 
                         }
@@ -90,7 +90,7 @@ public class PrintTheCheck {
                             pricesWitchID.put(resultSet.getInt("id"),resultSet.getInt("price"));
                         }
                         for (item item : arrayList) {
-                            price = price + pricesWitchID.get(Integer.parseInt(item.getId())) * Integer.parseInt(item.getAmount());
+                            price = price + pricesWitchID.get(Integer.parseInt(item.id)) * Integer.parseInt(item.amount);
                         }
                         System.out.println("Total Price: " + price);
                         fileWriter.write("Total Price: " + price);

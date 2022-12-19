@@ -17,14 +17,14 @@ public class Main {
                 ArrayList<item> items = new ArrayList<>();
                 for (String s : str1) {
                     String[] str3 = s.split("-");
-                    items.add(new item(str3[0],str3[1]));
+                    items.add(new itemBuilderImpl().setId(str3[0]).setAmount(str3[1]).build());
                 }
                 PrintTheCheck.printTheCheck(items);
             }else{
                     ArrayList<item> items = new ArrayList<>();
                     for (String arg1 : args){
                         String[] str = arg1.split("-");
-                        items.add(new item(str[0],str[1]));
+                        items.add(new itemBuilderImpl().setId(str[0]).setAmount(str[1]).build());
                     }
                     PrintTheCheck.printTheCheck(items);
                 }

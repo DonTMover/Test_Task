@@ -23,7 +23,7 @@ public class sql {
     }
     public static String sqlcards = "INSERT INTO cards (id,discound,first_name,last_name) VALUES (?,?,?,?)";
 
-    public static String sqlitems = "INSERT INTO items (id,name,price) VALUES (?,?,?)";
+    public static String sqlitems = "INSERT INTO items (id,name,price,promotional) VALUES (?,?,?,?)";
 
 
 
@@ -57,7 +57,7 @@ public class sql {
             }
         }
     }
-    public static boolean AddToItems(Integer id,String name,Integer price){
+    public static boolean AddToItems(Integer id,String name,Integer price,Boolean promotional){
         if (id<0){
             return false;
         }
@@ -71,6 +71,7 @@ public class sql {
             }else {
                 statement.setInt(3,0);
             }
+            statement.setBoolean(4,promotional);
 
 
             int rows = statement.executeUpdate();

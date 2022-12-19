@@ -22,7 +22,7 @@ class sqlTest {
 
     @Test
     void addToItems() {
-        assertTrue(sql.AddToItems(9999, "Test", 9999));
+        assertTrue(sql.AddToItems(9999, "Test", 9999,true));
     }
 
     @Test
