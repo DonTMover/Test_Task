@@ -1,3 +1,0 @@
-Amount:1 Name:Худший Керри Price:10
-Amount:6 Name:AnyThink Price:10
-Total Price: 57.6
