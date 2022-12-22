@@ -100,6 +100,7 @@ public class PrintTheCheck {
                         if (resultSet4.next()){
                             discound = resultSet4.getInt("discound");
                             price =price - (price *(discound/100));
+                            System.out.println("Discound: " + discound);
                         }
                         System.out.println("Total Price: " + price);
                         fileWriter.write("Total Price: " + price);

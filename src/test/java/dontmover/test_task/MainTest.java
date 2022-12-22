@@ -3,7 +3,7 @@ package dontmover.test_task;
 import org.junit.jupiter.api.Test;
 
 class MainTest {
-    private static String[] array = new String[3];
+    private static String[] array = new String[4];
     static {
 
         array[0] = "3-2";
@@ -14,6 +14,6 @@ class MainTest {
 
     @Test
     void main() {
-        //Я не знаю как, через System.setOut и через PrintStream?
+        //Я не знаю как. через System.setOut и через PrintStream?
     }
 }
